@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<!-- <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}"> -->
+<link rel=stylesheet type=text/css href="\static\images\style.css">
+
+{% endblock title %}
+
+{% block body %}
+
+
+<div class="container">
+        <h1>{{search_string}}</h1>
+        {% for table in datavalue %}
+        <h2>{{ table | safe }}</h2> 
+        {% endfor %}
+        <!-- datavalue -->
+</div>
+
+{% endblock body %}
